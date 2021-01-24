@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="eclipseLinkJPA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>jpa.model.manytoone.Student</class>
+        <class>jpa.model.manytoone.School</class>
+        <class>jpa.model.onetomany.Department</class>
+        <class>jpa.model.onetomany.Employee</class>
+        <class>jpa.model.onetoone.Identity</class>
+        <class>jpa.model.onetoone.Person</class>
+        <class>jpa.model.onetoone.StudentCard</class>
+        <class>jpa.model.manytomany.Kelas</class>
+        <class>jpa.model.manytomany.Teacher</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:mysql://localhost:3306/jpa_eclipselink_labs_01"></property>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="password"/>
+            <property name="eclipselink.logging.level" value="FINE" />
+            <!-- comment this property below if you don't want to generate table from
+                entity -->
+            <property name="eclipselink.ddl-generation" value="create-tables" />
+        </properties>
+    </persistence-unit>
+</persistence>
